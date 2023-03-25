@@ -17,18 +17,23 @@
     import { ref } from "vue";
 import  Input  from "../components/Input.vue";
 import  Button  from "../components/Button.vue";
-import { registerUser } from "../api/auth";
+import {  registerUser } from "../api/auth";
+import { useRouter } from "vue-router";
 
 //data
     const name = ref();
     const email = ref();
     const password = ref();
+    const router = useRouter();
 
 //methods
     const register = async() => {
-        if (!email.value || !password.value) return
+
+
+
+        if (!email.value || !password.value || !name.value) return
         await registerUser(email.value, password.value, name.value)
-        console.log("register user ...");
+        router.push({name: "application"})
         
     }
 </script>

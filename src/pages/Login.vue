@@ -17,15 +17,18 @@
 import  Input  from "../components/Input.vue";
 import  Button  from "../components/Button.vue";
 import { auth } from "../api/auth";
+import { useRouter } from "vue-router";
 
 //data
     const email = ref();
     const password = ref();
+    const router = useRouter();
 
 //methods
     const login = async() => {
-        await auth(email.value.value, password.value.value)
-        console.log("loggin in ...");
         
+        
+        await auth(email.value, password.value)
+        router.push({name: "application"})
     }
 </script>

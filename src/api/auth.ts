@@ -11,8 +11,13 @@ async function auth(email: string, password:string) {
 
 //Register method
 async function registerUser(email: string, password:string, name: string) {
-    account.create("unique()", email, password, name)
-    auth(email, password)
+    account.create("unique()", email, password, name).then(Response => {
+        console.log(Response);
+        auth(email, password)
+    }).catch(err => {
+        console.log(err);
+        
+    })
 }
 
 //exports
