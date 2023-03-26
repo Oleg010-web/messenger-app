@@ -9,7 +9,9 @@ async function auth(email: string, password: string) {
 
 //Register method
 async function registerUser(email: string, password: string, name: string) {
-  return account.create('unique()', email, password, name)
+  return account.create('unique()', email, password, name).then(()=>{
+    return auth(email, password)
+  })
 }
 
 //exports

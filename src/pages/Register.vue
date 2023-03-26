@@ -40,7 +40,7 @@
 import { ref } from 'vue'
 import Input from '../components/Input.vue'
 import Button from '../components/Button.vue'
-import { registerUser, auth } from '../api/auth'
+import { registerUser } from '../api/auth'
 import { useRouter } from 'vue-router'
 
 //data
@@ -53,7 +53,6 @@ const router = useRouter()
 const register = async () => {
   if (!email.value || !password.value ) return
   await registerUser(email.value, password.value, name.value)
-  await auth(email.value,password.value)
   router.push({ name: 'application' })
 }
 </script>
