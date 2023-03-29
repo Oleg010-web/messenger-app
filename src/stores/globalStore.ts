@@ -6,9 +6,11 @@ export enum SidebarView {
   NEW_GROUP_PARTICIPANTS = 'NEW_GROUP_PARTICIPANTS',
   NEW_GROUP_INFO = 'NEW_GROUP_INFO'
 }
+
 interface State {
   sidebarView: SidebarView
 }
+
 export const useGlobalStore = defineStore('global', {
   state: () => {
     return {
