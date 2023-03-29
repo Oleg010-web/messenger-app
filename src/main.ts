@@ -6,7 +6,7 @@ import Login from './pages/Login.vue'
 import Register from './pages/Register.vue'
 import Application from './pages/Application.vue'
 import { account } from './api/index'
-import {createPinia} from 'pinia'
+import { createPinia } from 'pinia'
 
 const routes: RouteRecordRaw[] = [
   { path: '/login', component: Login, name: 'login' },
