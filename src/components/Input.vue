@@ -3,11 +3,11 @@
     <label class="block text-sm font-medium text-gray-700">{{ label }}</label>
     <div class="mt-1">
       <input
-        :type="type"
+        :type="props.type"
         class="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
-        :placeholder="placeholder"
-        v-model="model"
-        @input="$emit('update:modelValue', model)"
+        :placeholder="props.placeholder"
+        v-model="props.modelValue"
+        @input="onUpdate"
       />
     </div>
   </div>
@@ -15,15 +15,19 @@
 
 <script setup lang="ts">
 
-import { ref } from 'vue'
 
 interface Props {
   label?: string
   type: string
   placeholder?: string
+  modelValue: string
 }
 
-defineProps<Props>()
+const emit = defineEmits(["update: modelValue"])
+const props = defineProps<Props>()
 
-const model = ref()
+const onUpdate = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit("update: modelValue", target.value)
+}
 </script>
