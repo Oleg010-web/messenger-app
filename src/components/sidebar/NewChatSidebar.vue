@@ -1,10 +1,5 @@
 <template>
-    <header class="w-full h-28 bg-custom-whatsapp-2 flex items-end p-4 text-white">
-        <div class="flex items-center">
-            <ArrowLeftIcon class="w-6 cursor-pointer" @click="onBack"/>
-            <div class="font-semibold text-lg ml-4">New chat</div>
-        </div>
-    </header>
+    <SidebarHeader text="New chat" :backPath="SidebarView.CONTACTS"/>
     <section class="p-2 border-b border-b-gray-300">
         <Input type="text" placeholder="Search contacts" v-model="search"/>
     </section>
@@ -23,13 +18,11 @@ import { ArrowLeftIcon, UserIcon } from '@heroicons/vue/24/solid';
 import { ref } from 'vue';
 import { SidebarView, useGlobalStore } from '../../stores/globalStore';
 import Input from '../Input.vue';
+import SidebarHeader from './elemants/SidebarHeader.vue';
 
 const globalStore = useGlobalStore();
 const search = ref("");
 
-const onBack = () => {
-    globalStore.showSidebarView(SidebarView.CONTACTS)
-}
 
 const showCreateGroupView = () => {
     globalStore.showSidebarView(SidebarView.NEW_GROUP_PARTICIPANTS)
