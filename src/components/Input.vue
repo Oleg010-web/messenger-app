@@ -14,20 +14,18 @@
 </template>
 
 <script setup lang="ts">
-
 interface Props {
-  label?: string;
-  type: string;
-  placeholder?: string;
+  label?: string
+  type: string
+  placeholder?: string
   modelValue: string
 }
 
-const emit = defineEmits(["update:modelValue"])
+const emit = defineEmits(['update:modelValue'])
 
-const onUpdate = (event: Event)=> {
-  const target = event.target as HTMLInputElement;
-  emit("update:modelValue", target.value)
+const onUpdate = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  emit('update:modelValue', target.value)
 }
 defineProps<Props>()
-
 </script>

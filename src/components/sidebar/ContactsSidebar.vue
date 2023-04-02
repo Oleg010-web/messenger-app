@@ -15,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+//imports
 import { SidebarView, useGlobalStore } from '../../stores/globalStore'
 import {
   ClockIcon,
@@ -25,9 +26,11 @@ import Avatar from '../Avatar.vue'
 import Input from '../Input.vue'
 import { ref } from 'vue';
 
+//data
 const globalStore = useGlobalStore();
 const search = ref("")
 
+//methods
 const showNewChatView = () => {
   globalStore.showSidebarView(SidebarView.NEW_CHAT)
 }
