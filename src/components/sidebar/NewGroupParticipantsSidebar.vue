@@ -27,7 +27,7 @@
 import SidebarHeader from './elemants/SidebarHeader.vue'
 import { SidebarView } from '@/stores/globalStore'
 import { useGroupStore } from '@/stores/groupeStore'
-import Input from '../Input.vue'
+import Input from '@/components/Input.vue'
 import { ref } from 'vue'
 import Badge from './Badge.vue'
 

@@ -22,8 +22,8 @@ import {
   PlusIcon,
   EllipsisHorizontalIcon
 } from '@heroicons/vue/24/solid'
-import Avatar from '../Avatar.vue'
-import Input from '../Input.vue'
+import Avatar from '@/components/Avatar.vue';
+import Input from '@/components/Input.vue'
 import { ref } from 'vue';
 
 //data
