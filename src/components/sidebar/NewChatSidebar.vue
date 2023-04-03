@@ -22,7 +22,7 @@
 //imports
 import { ArrowLeftIcon, UserIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
-import { SidebarView, useGlobalStore } from '../../stores/globalStore'
+import { SidebarView, useGlobalStore } from '@/stores/globalStore'
 import Input from '../Input.vue'
 import SidebarHeader from './elemants/SidebarHeader.vue'
 

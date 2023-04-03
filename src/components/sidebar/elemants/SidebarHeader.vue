@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 //imports
-import { SidebarView, useGlobalStore } from '../../../stores/globalStore'
+import { SidebarView, useGlobalStore } from '@/stores/globalStore'
 import { ArrowLeftIcon } from '@heroicons/vue/24/solid'
 
 //data

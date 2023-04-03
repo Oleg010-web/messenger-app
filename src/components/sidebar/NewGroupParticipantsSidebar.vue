@@ -25,8 +25,8 @@
 <script setup lang="ts">
 //impots
 import SidebarHeader from './elemants/SidebarHeader.vue'
-import { SidebarView } from '../../stores/globalStore'
-import { useGroupStore } from '../../stores/groupeStore'
+import { SidebarView } from '@/stores/globalStore'
+import { useGroupStore } from '@/stores/groupeStore'
 import Input from '../Input.vue'
 import { ref } from 'vue'
 import Badge from './Badge.vue'

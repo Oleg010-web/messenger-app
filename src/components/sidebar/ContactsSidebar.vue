@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 //imports
-import { SidebarView, useGlobalStore } from '../../stores/globalStore'
+import { SidebarView, useGlobalStore } from '@/stores/globalStore'
 import {
   ClockIcon,
   PlusIcon,
