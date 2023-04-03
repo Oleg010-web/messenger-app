@@ -10,7 +10,7 @@
     </section>
   </header>
   <section class="p-2 border-b border-b-gray-300">
-    <Input v-model="search" type="text" placeholder="Search or start new chat..." />
+    <Input v-model="search" type="text" placeholder="Search or start new chat." />
   </section>
 </template>
 
