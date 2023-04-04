@@ -31,9 +31,9 @@
 <script setup lang="ts">
 //imports
 import { ref } from 'vue'
-import Input from '../components/Input.vue'
-import Button from '../components/Button.vue'
-import { auth } from '../api/auth'
+import Input from '@/components/Input.vue'
+import Button from '@/components/Button.vue'
+import { auth } from '@/api/auth'
 import { useRouter } from 'vue-router'
 
 //data
