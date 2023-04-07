@@ -12,17 +12,27 @@
     <section class="p-2 my-4">
         <Input type="text" v-model="groupStore.newGroup.name" placeholder="Group name."/>
     </section>
+    <section v-if="groupStore.newGroup.name.length > 0" class="flex w-full justify-center mt-20">
+        <div class="bg-custom-whatsapp-1 w-12 h-12 rounded-full flex items-center text-white justify-center cursor-pointer">
+            <CheckIcon class="w-6" @click="createGroup"/>
+        </div>
+    </section>
 </template>
 
 <script setup lang="ts">
 //imports
 import { SidebarView } from '@/stores/globalStore';
 import SidebarHeader from './elemants/SidebarHeader.vue';
-import { CameraIcon, UserGroupIcon } from '@heroicons/vue/24/solid';
+import { CameraIcon, CheckIcon, UserGroupIcon } from '@heroicons/vue/24/solid';
 import Input from '../Input.vue';
 import { useGroupStore } from '@/stores/groupeStore';
 
 //data
 const groupStore = useGroupStore()
 
+
+//methods
+const createGroup = () => {
+    groupStore.createGroup()
+}
 </script>

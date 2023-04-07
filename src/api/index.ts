@@ -1,7 +1,10 @@
-import { Client, Account } from 'appwrite'
+import { ENDPOINT, PROJECT_ID } from '@/config'
+import { Client, Account, Teams } from 'appwrite'
 
 const client = new Client()
-client.setEndpoint('http://localhost/v1').setProject('641d61e8de5ffd1375cd')
+client.setEndpoint(ENDPOINT).setProject(PROJECT_ID)
+
+const team = new Teams(client)
 
 const account = new Account(client)
-export { client, account }
+export { client, account, team }
