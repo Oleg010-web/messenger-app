@@ -1,3 +1,4 @@
+import { createGroup } from '@/api/teams'
 import { defineStore } from 'pinia'
 
 export interface Group {
@@ -37,6 +38,9 @@ export const useGroupStore = defineStore('groupStore', {
     },
     setNewGroupInvitee (invitees: string[]) {
       this.newGroup.invitees = invitees
+    },
+    async createGroup() {
+      const team = await createGroup(this.newGroup.name)
     }
   }
 })
